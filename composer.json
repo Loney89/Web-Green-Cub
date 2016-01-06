@@ -1,0 +1,23 @@
+{
+    "name":"loney89/green-cub",
+    "require": {
+      "monolog/monolog": "*",
+      "silex/silex":"*",
+      "guzzlehttp/guzzle":"*",
+      "twig/twig":"*",
+      "doctrine/dbal":"*",
+      "symfony/twig-bridge":"*",
+      "symfony/monolog-bridge":"*",
+      "symfony/doctrine-bridge":"*"
+    },
+
+    "autoload": {
+        "psr-4": {
+          "GreenCub\\Api\\": "api/",
+          "GreenCub\\Api\\Lib\\": "api/lib/",
+          "GreenCub\\Api\\Controllers\\": "api/controllers/",
+          "GreenCub\\Models\\": "models/",
+          "GreenCub\\Tests\\": "tests/"
+        }
+    }
+}
