@@ -1,0 +1,26 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+        <h1 id="blog_header">{{ app.blog_title }}</h1>
+
+        <div class="row">
+            <div class="three columns">
+                <span>
+                    <i>Description;</i><br/>
+                    <p>{{ app.blog_description }}</p>
+                </span>
+                <hr/>
+                <ul>
+                    <li>Created - {{ app.blog_created }}</li>
+                    <li>Updated - {{ app.blog_updated}}</li>
+                    <li>Likes - {{ app.blog_likes }}</li>
+                    <li>Dislikes - {{ app.blog_dislikes }}</li>
+                </ul>
+            </div>
+            <div class="nine columns">
+                {{ app.blog_contents }}
+            </div>
+        </div>
+
+{% endblock %}

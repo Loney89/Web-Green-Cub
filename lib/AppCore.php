@@ -50,13 +50,13 @@ class AppCore
         ));
 
         $app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
-            'dbs.options' => array (
+            'db.options' => array(
                 'driver'    => 'pdo_mysql',
                 'host'      => $app['db.host'],
                 'dbname'    => $app['db.name'],
                 'user'      => $app['db.username'],
                 'password'  => $app['db.password'],
-                'charset'   => $app['db.charset'],
+                'charset'   => $app['db.charset']
             ),
         ));
     }
@@ -116,7 +116,19 @@ class AppCore
      */
     public function setupRouting($app)
     {
-       $app->get('/', 'GreenCub\Controllers\Home::getHome');
+        //Home Page
+        $app->get('/', 'GreenCub\Controllers\Home::getHome');
+
+        //Blog Pages
+        $app->get('/blog/article/{id}','GreenCub\Controllers\Blog::getBlog');
+        $app->get('/blog/article/last','GreenCub\Controllers\Blog::getLast');
+        $app->get('/blog/article/{month}','GreenCub\Controllers\Blog::getMonth');
+        $app->post('/blog/article/create/', 'GreenCub\Controllers\Blog::createBlog');
+        $app->post('/blog/article/edit/', 'GreenCub\Controllers\Blog::editBlog');
+        $app->post('/blog/article/delete/', 'GreenCub\Controllers\Blog::deleteBlog');
+
+        //Error pages
+        $app->get('/blog/article/', 'GreenCub\Controllers\Error::getBlog');
     }
 
 }

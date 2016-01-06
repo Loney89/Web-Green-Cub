@@ -14,5 +14,7 @@ $core = new GreenCub\Lib\AppCore($app);
 //Then log it's working, like durh.
 $app['monolog']->addInfo('System Initialised');
 
+$app['random_string'] = $app['blog.models']->randomString($app);
+
 //Run!
 $app->run();
