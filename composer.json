@@ -13,9 +13,8 @@
 
     "autoload": {
         "psr-4": {
-          "GreenCub\\Api\\": "api/",
-          "GreenCub\\Api\\Lib\\": "api/lib/",
-          "GreenCub\\Api\\Controllers\\": "api/controllers/",
+          "GreenCub\\Lib\\": "lib/",
+          "GreenCub\\Controllers\\": "controllers/",
           "GreenCub\\Models\\": "models/",
           "GreenCub\\Tests\\": "tests/"
         }

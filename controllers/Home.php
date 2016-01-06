@@ -1,6 +1,6 @@
 <?php
 
-namespace GreenCub\Api\Controllers;
+namespace GreenCub\Controllers;
 
 use Silex\Application;
 

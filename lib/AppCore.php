@@ -6,7 +6,7 @@
  * Time: 20:40
  */
 
-namespace GreenCub\Api\Lib;
+namespace GreenCub\Lib;
 
 use Silex\Application;
 
@@ -39,11 +39,11 @@ class AppCore
     public function setupSilexProviders($app)
     {
         $app->register(new \Silex\Provider\MonologServiceProvider(), array(
-            'monolog.logfile' => __DIR__.'../../../logs/dev.log',
+            'monolog.logfile' => __DIR__.'../../logs/dev.log',
         ));
 
         $app->register(new \Silex\Provider\TwigServiceProvider(), array(
-            'twig.path' => __DIR__.'../../../public/',
+            'twig.path' => __DIR__.'../../public/',
             'twig.cache' => __DIR__.'../../public/tmp',
             'twig.charset' => 'utf-8',
             'twig.debug' => $app['debug']
@@ -104,7 +104,7 @@ class AppCore
         // Login
         // Home
         $app['home.controller'] = $app->share(function(){
-           return new \GreenCub\Api\Controllers\Home();
+           return new \GreenCub\Controllers\Home();
         });
 
     }
@@ -116,7 +116,7 @@ class AppCore
      */
     public function setupRouting($app)
     {
-       $app->get('/', 'GreenCub\Api\Controllers\Home::getHome');
+       $app->get('/', 'GreenCub\Controllers\Home::getHome');
     }
 
 }

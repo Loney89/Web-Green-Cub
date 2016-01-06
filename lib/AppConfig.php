@@ -3,7 +3,7 @@
  * Set a bunch of options in this file, like....
  */
 
-namespace GreenCub\Api\Lib;
+namespace GreenCub\Lib;
 
 use Silex\Application;
 

@@ -6,7 +6,7 @@
  * Time: 21:18
  */
 
-namespace GreenCub\Api\Controllers;
+namespace GreenCub\Controllers;
 
 
 class Blog
